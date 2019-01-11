@@ -1,0 +1,16 @@
+
+@mixin lien {
+
+        text-decoration: none;
+        color:#303030;
+        font-family: Roboto;
+        text-transform: capitalize;
+        &:hover{
+            color: rgb(255, 255, 255);
+        }
+    
+    
+}
+@mixin color{
+    background:linear-gradient(to left, #ff1148, #ff4b2b9d);
+}

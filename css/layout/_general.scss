@@ -1,0 +1,409 @@
+//***************//
+//***INTERLUDE***//
+//***************//
+
+.interlude {
+    width: 100%;
+    height: 300px;
+    background: url('../../media/img/palmtree.jpeg') no-repeat center/cover;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    padding: 100px 0;
+    color: white;
+
+    h1 {
+        font-size: 50px;
+        margin: 0 auto;
+        //https://uigradients.com/#BurningOrange//
+        background: linear-gradient(to left, #ff1148, #ff4b2b9d);
+        width: 300px;
+        height: 100px;
+        text-align: center;
+        padding: 20px;
+        border-radius: 10px;
+
+        a {
+            text-decoration: none;
+            color: white;
+
+            &:hover {
+                color: yellow;
+            }
+        }
+
+    }
+}
+
+//***************//
+//***TRAVAUX*****//
+//***************//
+
+.travaux {
+    width: 100%;
+    max-width: 1194px;
+    height: 100%;
+    font-family: 'Roboto';
+    margin: 0 auto;
+
+    .trabando {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        align-content: center;
+        padding: 50px 50px;
+
+        .trabajo {
+            width: 210px;
+            position: relative;
+            height: 200px;
+            text-align: center;
+            padding: 5px;
+            margin: 10px;
+            cursor: pointer;
+
+            // &:hover{
+            //     opacity: 0.55;
+
+            // }
+            img {
+                width: 200px;
+                height: 180px;
+                border-radius: 10px;
+                transition: 1s all ease-in-out;
+
+
+            }
+
+            &:hover {
+                transform: scale(1.05);
+
+            }
+
+            .trab {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-content: center;
+                opacity: 0;
+                top: 4px;
+                left: 4px;
+                border-radius: 5px;
+                width: 200px;
+                height: 180px;
+                z-index: 2;
+                padding: 10px;
+                background: linear-gradient(to left, #ff416c, #ff4b2b);
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    opacity: 0.8;
+                    box-shadow: 3px 3px 5px #c2ebe5;
+                }
+
+                a {
+                    @include lien();
+                    font-size: 20px;
+                    color: black;
+
+                }
+            }
+
+            // .test{
+            //     width: 200px;
+            //     height: 180px;
+            //     position: absolute;
+            //     background: linear-gradient(to left, #ff416c, #ff4b2b);
+            //     opacity: 0;
+            //     top: 4px;
+            //     left: 4px;
+            //     z-index: 1;
+            //     border-radius: 5px;
+            //     &:hover{
+            //         opacity: 0.7;
+            //     }
+            // }
+        }
+    }
+}
+
+//****************************
+//***** CLIQUE  ***********
+//**************************
+
+.burger-menu{
+    width: 70px;
+    height: 80px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 11;
+    span{
+        background:white;
+        width: 50px;
+        height: 2px;
+        position: absolute;
+        &:first-child{
+            transform: rotate(45deg);
+            top: 40px;
+        }
+        &:last-child{
+            transform: rotate(-45deg);
+            top: 40px;
+        }
+    }
+    
+    // &.actioncroix  {
+    //     span:first-child {
+    //         transform: rotate(45deg);
+    //         top: 40px;
+    //     }
+    //     span:last-child{
+    //         transform: rotate(-45deg);
+    //         top: 40px;
+    //     }
+
+    // }
+    // &.active-blue{
+    //     color: aquamarine;
+    // }
+&.actionscroll{
+    background: rgba(0, 0, 0, 0.808);
+}
+}
+.clique {
+    visibility:hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #355d56eb;
+    z-index: 10;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    padding: 50px;
+
+    .img {
+        width: 599px;
+        height: 499px;
+        border: 3px solid #e92045;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .txt {
+        color: white;
+        font-size: 20px;
+        text-decoration: none;
+        text-transform: initial;
+        border: 3px solid #e92045;
+        background: #303030;
+        width: 400px;
+        height: 400px;
+        padding: 45px;
+        @include color();
+        a{
+            text-decoration: none;
+            i {
+                font-size: 3em;
+                color: #335a53;
+                padding: 20px 0px;
+                
+            }
+        }
+
+        // &:hover {
+        //     color:  #e92045;
+        // }
+    }
+
+    &.actif {
+        visibility: visible;
+        position: fixed;
+    }
+}
+
+//CROIX//
+
+//***************//
+//***  CV  ***//
+//***************//
+.cv {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    padding: 20px 200px;
+    text-align: center;
+
+    .professional {
+        padding: 20px 0px;
+        text-align: justify;
+
+        h1 {
+            font-size: 40px;
+            font-family: 'Lobster', cursive;
+            color: #303030;
+        }
+
+        p {
+            font-family: 'Roboto';
+            
+        }
+        
+
+        a {
+            text-decoration: none;
+            text-transform: initial;
+            font-size: 15px;
+            font-weight: bold;
+            color: #303030;
+            font-family: 'Roboto';
+
+            &:hover {
+                color: crimson;
+            }
+        }
+    }
+}
+
+//***************//
+//***  CONTACT **//
+//***************//
+
+.contact {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 600px;
+    margin: 0px auto;
+    font-family: Roboto;
+    background: #ececea;
+
+
+    fieldset {
+        height: 500px;
+        background: #d1ebe8;
+        border-radius: 10px;
+    }
+
+    #envoyer {
+        margin: 10px auto;
+        border: 1px solid grey;
+        background: url('../../media/img/palmtree.jpeg') no-repeat center/cover;
+        font-weight: bold;
+        font-size: 40px;
+        color: white;
+        height: 70px;
+
+    }
+
+    #msg {
+        height: 120px;
+    }
+
+    .contact2 {
+        width: 500px;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+
+        img {
+            width: 300px;
+            height: 205px;
+            margin: 100px auto;
+            border: 5px solid white;
+            border-radius: 5px;
+            box-shadow: 1px 2px #30303040;
+
+        }
+    }
+
+
+}
+
+input,
+textarea,
+select {
+    outline: none;
+    
+    padding: 10px;
+    border-radius: 3px;
+    width: 100%;
+    transition: .3s all ease-in-out;
+    color: rgb(14, 90, 71);
+    font-size: 20px;
+}
+
+
+
+//***************//
+//***  FOOTER  ***//
+//***************//
+
+footer {
+    background: #303030;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-content: center;
+    padding-top: 50px;
+
+    .moreinfos {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: row;
+        padding: 30px;
+
+        a {
+            text-decoration: none;
+            color: white;
+            padding: 20px;
+        }
+
+        i {
+            font-size: 5em;
+            color: Tomato;
+        }
+    }
+
+    .divers {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        padding: 30px 30px;
+        color: white;
+
+        p {
+            margin: 0 auto;
+            font-size: 20px;
+
+            i {
+                font-size: 3em;
+                color: white;
+                padding: 10px;
+
+                &:hover {
+                    color: #f91c4fc4;
+                }
+            }
+        }
+    }
+
+}
